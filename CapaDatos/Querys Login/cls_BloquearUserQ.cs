@@ -9,13 +9,13 @@ namespace CapaDatos.Querys_Login
 {
     public class cls_BloquearUserQ : cls_EjecutarQ
     {
-        public void BloquearUsuario(int idUser)
+        public void BloquearUsuario(string usuario)
         {
-            string sSql = "UPDATE Usuarios SET estado = @estado WHERE id_usuario = @idUser";
+            string sSql = "UPDATE Usuarios SET estado = @estado WHERE usuario = @usuario";
             List<SqlParameter> parametros = new List<SqlParameter>
             {
                 new SqlParameter("@estado", false),  // Asumiendo que "false" representa un usuario bloqueado
-                new SqlParameter("@idUser", idUser)
+                new SqlParameter("@usuario", usuario)
             };
 
             try

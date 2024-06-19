@@ -177,8 +177,11 @@ namespace CapaVistas
                         }
                     }
                 }
-                //acá iría el ELSE para bloquear al usuario que tuvo muchos intentos fallidos
-                
+                else
+                {
+                    cls_BloquearUser Block = new cls_BloquearUser(usuario);
+                }
+
             }
             else
             {   
