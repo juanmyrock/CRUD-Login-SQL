@@ -9,7 +9,7 @@ namespace CapaVistas
     public partial class frmMenu : Form
     {
         cls_ProdLogica logica_prod = new cls_ProdLogica(); //Instancio objeto para clase Logica Login
-
+        private Form activeForm;
         public frmMenu()
         {
             InitializeComponent();
@@ -48,7 +48,6 @@ namespace CapaVistas
             this.WindowState = FormWindowState.Normal;
             btnMinimize.Visible = false;
             btnMaximize.Visible = true;
-            picLogOut.Location = new Point(192, 640);
         }
 
         private void btnOcultar_Click(object sender, EventArgs e) //para ocultar/minimizar la aplicación
@@ -61,52 +60,24 @@ namespace CapaVistas
             this.WindowState = FormWindowState.Maximized;
             btnMinimize.Visible = true;
             btnMaximize.Visible = false;
-            picLogOut.Location = new Point(192, 800);
         }
         #endregion
 
-        public void AbrirForms(object formHijo) //método para abrir otros formularios dentro del panel contenedor principal
-        {
-            if (this.panelContenedor.Controls.Count > 0)
-            {
-                this.panelContenedor.Controls.RemoveAt(0); //si hay algún panel abierto lo cierra
-            }
-            Form fh = formHijo as Form; //crea objeto como tipo form
-            fh.TopLevel = false; //panel secundario no principal
-            fh.Dock = DockStyle.Fill; //que se acople en el centro
-            this.panelContenedor.Controls.Add(fh); //agrego el formulario hijo al panel
-            this.panelContenedor.Tag = formHijo; //instancio el contenedor de datos
-            fh.Show(); //muestro el formulario
-        }
- 
-
         #region Config Botones Menú
-        private void btnSlide_Click(object sender, EventArgs e) //para minimizar el panel de menú y acomodar los íconos
-        {
-            if (panelMenu.Width == 240)
-            {
-                panelMenu.Width = 72;
-                picProductos.Location = new Point(25, 301);
-                picVentas.Location = new Point(25, 363);
-                picClientes.Location = new Point(25, 425);
-                picFacturas.Location = new Point(25, 486);
-                picReportes.Location = new Point(25, 549);
-                picLogOut.Size = new Size(40, 40);
-                picLogOut.Location = new Point(14, 595);
+        //private void btnSlide_Click(object sender, EventArgs e) //para minimizar el panel de menú y acomodar los íconos
+        //{
+        //    if (panelMenu.Width == 240)
+        //    {
+        //        panelMenu.Width = 72;
+        //        picLogOut.Location = new Point(12, 146);
 
-            }
-            else
-            {
-                panelMenu.Width = 240;
-                picProductos.Location = new Point(25, 301);
-                picVentas.Location = new Point(25, 363);
-                picClientes.Location = new Point(25, 425);
-                picFacturas.Location = new Point(25, 486);
-                picReportes.Location = new Point(25, 549);
-                picLogOut.Size = new Size(45, 45);
-                picLogOut.Location = new Point(192, 640);
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        panelMenu.Width = 240;
+        //        picLogOut.Location = new Point(195, 196);
+        //    }
+        //}
 
         private void picLogOut_Click(object sender, EventArgs e) //Botón de deslogueo
         {
@@ -119,10 +90,41 @@ namespace CapaVistas
                 {
                     this.Show();
                 }
-                
+
             }
         }
         #endregion
+
+        private void OpenChildForm(Form childForm, object btnSender) //Método para llamar un formulario hijo dentro del contenedor PanelChildFrm
+        {
+            if (activeForm != null)
+            { 
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelChildFrm.Controls.Add(childForm);
+            this.panelChildFrm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitulo.Text = childForm.Text;
+
+        }
+
+        #region Botones del Menú y sus Forms
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CapaVistas.Form_Menu.frm_Usuarios(), sender);
+        }
+
+
+
+        #endregion
+
+
     }
 
 

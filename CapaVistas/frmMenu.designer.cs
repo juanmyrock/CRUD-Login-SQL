@@ -45,9 +45,16 @@ namespace CapaVistas
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnOcultar = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.picFondo = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnUserLog = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEmpleados = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.picLogOut = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.picReportes = new System.Windows.Forms.PictureBox();
@@ -66,14 +73,18 @@ namespace CapaVistas
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.logoISFT = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.panelChildFrm = new System.Windows.Forms.Panel();
             this.panelBarraClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReportes)).BeginInit();
@@ -82,6 +93,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.picVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoISFT)).BeginInit();
+            this.panelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBarraClose
@@ -111,9 +123,9 @@ namespace CapaVistas
             this.labelTittle.Location = new System.Drawing.Point(380, 1);
             this.labelTittle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTittle.Name = "labelTittle";
-            this.labelTittle.Size = new System.Drawing.Size(535, 38);
+            this.labelTittle.Size = new System.Drawing.Size(600, 38);
             this.labelTittle.TabIndex = 4;
-            this.labelTittle.Text = "DISTRIBUIDORA: Los Mellis 1.0";
+            this.labelTittle.Text = "BUS MANAGER: SISTEMA DE GESTIÓN";
             this.labelTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMaximize
@@ -172,33 +184,18 @@ namespace CapaVistas
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panelContenedor.Controls.Add(this.picFondo);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 35);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1280, 685);
-            this.panelContenedor.TabIndex = 2;
-            // 
-            // picFondo
-            // 
-            this.picFondo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picFondo.Enabled = false;
-            this.picFondo.Image = ((System.Drawing.Image)(resources.GetObject("picFondo.Image")));
-            this.picFondo.Location = new System.Drawing.Point(535, 120);
-            this.picFondo.Margin = new System.Windows.Forms.Padding(2);
-            this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(506, 433);
-            this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFondo.TabIndex = 1;
-            this.picFondo.TabStop = false;
-            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
+            this.panelMenu.Controls.Add(this.pictureBox3);
+            this.panelMenu.Controls.Add(this.panel8);
+            this.panelMenu.Controls.Add(this.btnUserLog);
+            this.panelMenu.Controls.Add(this.pictureBox2);
+            this.panelMenu.Controls.Add(this.btnUsuarios);
+            this.panelMenu.Controls.Add(this.panel7);
+            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.btnEmpleados);
+            this.panelMenu.Controls.Add(this.panel6);
             this.panelMenu.Controls.Add(this.picLogOut);
             this.panelMenu.Controls.Add(this.btnSlide);
             this.panelMenu.Controls.Add(this.picReportes);
@@ -221,15 +218,137 @@ namespace CapaVistas
             this.panelMenu.Location = new System.Drawing.Point(0, 35);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 685);
+            this.panelMenu.Size = new System.Drawing.Size(240, 760);
             this.panelMenu.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Enabled = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(24, 204);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 28;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel8.Location = new System.Drawing.Point(0, 205);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 45);
+            this.panel8.TabIndex = 3;
+            // 
+            // btnUserLog
+            // 
+            this.btnUserLog.BackColor = System.Drawing.Color.Navy;
+            this.btnUserLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUserLog.FlatAppearance.BorderSize = 0;
+            this.btnUserLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnUserLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserLog.Font = new System.Drawing.Font("Century Gothic", 18.32727F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserLog.ForeColor = System.Drawing.Color.White;
+            this.btnUserLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserLog.Location = new System.Drawing.Point(2, 205);
+            this.btnUserLog.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUserLog.Name = "btnUserLog";
+            this.btnUserLog.Size = new System.Drawing.Size(188, 45);
+            this.btnUserLog.TabIndex = 27;
+            this.btnUserLog.Text = "        User";
+            this.btnUserLog.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Enabled = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(25, 648);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 648);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(228, 40);
+            this.btnUsuarios.TabIndex = 25;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel7.Location = new System.Drawing.Point(0, 648);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 40);
+            this.panel7.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 586);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleados.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
+            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.Location = new System.Drawing.Point(12, 586);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(228, 40);
+            this.btnEmpleados.TabIndex = 22;
+            this.btnEmpleados.Text = "  Empleados";
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel6.Location = new System.Drawing.Point(0, 586);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 40);
+            this.panel6.TabIndex = 21;
             // 
             // picLogOut
             // 
-            this.picLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLogOut.Image = ((System.Drawing.Image)(resources.GetObject("picLogOut.Image")));
-            this.picLogOut.Location = new System.Drawing.Point(192, 640);
+            this.picLogOut.Location = new System.Drawing.Point(195, 205);
             this.picLogOut.Name = "picLogOut";
             this.picLogOut.Size = new System.Drawing.Size(45, 45);
             this.picLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,14 +361,14 @@ namespace CapaVistas
             this.btnSlide.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSlide.Image = ((System.Drawing.Image)(resources.GetObject("btnSlide.Image")));
-            this.btnSlide.Location = new System.Drawing.Point(96, 640);
+            this.btnSlide.Location = new System.Drawing.Point(96, 715);
             this.btnSlide.Margin = new System.Windows.Forms.Padding(2);
             this.btnSlide.Name = "btnSlide";
             this.btnSlide.Size = new System.Drawing.Size(45, 45);
             this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSlide.TabIndex = 19;
             this.btnSlide.TabStop = false;
-            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
+            this.btnSlide.Visible = false;
             // 
             // picReportes
             // 
@@ -257,7 +376,7 @@ namespace CapaVistas
             this.picReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picReportes.Enabled = false;
             this.picReportes.Image = ((System.Drawing.Image)(resources.GetObject("picReportes.Image")));
-            this.picReportes.Location = new System.Drawing.Point(25, 549);
+            this.picReportes.Location = new System.Drawing.Point(25, 525);
             this.picReportes.Margin = new System.Windows.Forms.Padding(2);
             this.picReportes.Name = "picReportes";
             this.picReportes.Size = new System.Drawing.Size(40, 40);
@@ -271,7 +390,7 @@ namespace CapaVistas
             this.picFacturas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picFacturas.Enabled = false;
             this.picFacturas.Image = ((System.Drawing.Image)(resources.GetObject("picFacturas.Image")));
-            this.picFacturas.Location = new System.Drawing.Point(25, 486);
+            this.picFacturas.Location = new System.Drawing.Point(25, 462);
             this.picFacturas.Margin = new System.Windows.Forms.Padding(2);
             this.picFacturas.Name = "picFacturas";
             this.picFacturas.Size = new System.Drawing.Size(40, 40);
@@ -285,7 +404,7 @@ namespace CapaVistas
             this.picClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClientes.Enabled = false;
             this.picClientes.Image = ((System.Drawing.Image)(resources.GetObject("picClientes.Image")));
-            this.picClientes.Location = new System.Drawing.Point(25, 425);
+            this.picClientes.Location = new System.Drawing.Point(25, 401);
             this.picClientes.Margin = new System.Windows.Forms.Padding(2);
             this.picClientes.Name = "picClientes";
             this.picClientes.Size = new System.Drawing.Size(40, 40);
@@ -299,7 +418,7 @@ namespace CapaVistas
             this.picVentas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picVentas.Enabled = false;
             this.picVentas.Image = ((System.Drawing.Image)(resources.GetObject("picVentas.Image")));
-            this.picVentas.Location = new System.Drawing.Point(25, 363);
+            this.picVentas.Location = new System.Drawing.Point(25, 339);
             this.picVentas.Margin = new System.Windows.Forms.Padding(2);
             this.picVentas.Name = "picVentas";
             this.picVentas.Size = new System.Drawing.Size(40, 40);
@@ -313,7 +432,7 @@ namespace CapaVistas
             this.picProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picProductos.Enabled = false;
             this.picProductos.Image = ((System.Drawing.Image)(resources.GetObject("picProductos.Image")));
-            this.picProductos.Location = new System.Drawing.Point(25, 301);
+            this.picProductos.Location = new System.Drawing.Point(25, 277);
             this.picProductos.Margin = new System.Windows.Forms.Padding(2);
             this.picProductos.Name = "picProductos";
             this.picProductos.Size = new System.Drawing.Size(40, 40);
@@ -330,7 +449,7 @@ namespace CapaVistas
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Location = new System.Drawing.Point(12, 549);
+            this.btnReportes.Location = new System.Drawing.Point(12, 525);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(2);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(228, 40);
@@ -347,12 +466,12 @@ namespace CapaVistas
             this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturas.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
             this.btnFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnFacturas.Location = new System.Drawing.Point(12, 486);
+            this.btnFacturas.Location = new System.Drawing.Point(12, 462);
             this.btnFacturas.Margin = new System.Windows.Forms.Padding(2);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(228, 40);
             this.btnFacturas.TabIndex = 13;
-            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.Text = "Almacén";
             this.btnFacturas.UseVisualStyleBackColor = false;
             // 
             // btnClientes
@@ -364,12 +483,12 @@ namespace CapaVistas
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
             this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(12, 425);
+            this.btnClientes.Location = new System.Drawing.Point(12, 401);
             this.btnClientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(228, 40);
             this.btnClientes.TabIndex = 12;
-            this.btnClientes.Text = "Clientes";
+            this.btnClientes.Text = "Registros";
             this.btnClientes.UseVisualStyleBackColor = false;
             // 
             // btnVentas
@@ -381,18 +500,18 @@ namespace CapaVistas
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
             this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.Location = new System.Drawing.Point(12, 363);
+            this.btnVentas.Location = new System.Drawing.Point(12, 339);
             this.btnVentas.Margin = new System.Windows.Forms.Padding(2);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(228, 40);
             this.btnVentas.TabIndex = 11;
-            this.btnVentas.Text = "Ventas";
+            this.btnVentas.Text = "       Configuración";
             this.btnVentas.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(0, 549);
+            this.panel5.Location = new System.Drawing.Point(0, 525);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 40);
@@ -401,7 +520,7 @@ namespace CapaVistas
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(0, 486);
+            this.panel4.Location = new System.Drawing.Point(0, 462);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 40);
@@ -410,7 +529,7 @@ namespace CapaVistas
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(0, 425);
+            this.panel3.Location = new System.Drawing.Point(0, 401);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 40);
@@ -419,7 +538,7 @@ namespace CapaVistas
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(0, 363);
+            this.panel2.Location = new System.Drawing.Point(0, 339);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 40);
@@ -428,7 +547,7 @@ namespace CapaVistas
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Location = new System.Drawing.Point(0, 301);
+            this.panel1.Location = new System.Drawing.Point(0, 277);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 40);
@@ -444,12 +563,12 @@ namespace CapaVistas
             this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 13.74545F);
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(12, 301);
+            this.btnProductos.Location = new System.Drawing.Point(12, 277);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(228, 40);
             this.btnProductos.TabIndex = 1;
-            this.btnProductos.Text = "Productos";
+            this.btnProductos.Text = "Vehículos";
             this.btnProductos.UseVisualStyleBackColor = false;
             // 
             // logoISFT
@@ -460,18 +579,53 @@ namespace CapaVistas
             this.logoISFT.Location = new System.Drawing.Point(0, 0);
             this.logoISFT.Margin = new System.Windows.Forms.Padding(2);
             this.logoISFT.Name = "logoISFT";
-            this.logoISFT.Size = new System.Drawing.Size(240, 288);
+            this.logoISFT.Size = new System.Drawing.Size(240, 201);
             this.logoISFT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoISFT.TabIndex = 0;
             this.logoISFT.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.29091F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTitulo.Location = new System.Drawing.Point(460, 13);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(119, 37);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "INICIO";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
+            this.panelTitulo.Controls.Add(this.lblTitulo);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(240, 35);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(1040, 60);
+            this.panelTitulo.TabIndex = 3;
+            // 
+            // panelChildFrm
+            // 
+            this.panelChildFrm.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelChildFrm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildFrm.Location = new System.Drawing.Point(240, 95);
+            this.panelChildFrm.Name = "panelChildFrm";
+            this.panelChildFrm.Size = new System.Drawing.Size(1040, 700);
+            this.panelChildFrm.TabIndex = 4;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1280, 795);
+            this.Controls.Add(this.panelChildFrm);
+            this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelBarraClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -483,9 +637,10 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            this.panelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReportes)).EndInit();
@@ -494,6 +649,8 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.picVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoISFT)).EndInit();
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -506,7 +663,6 @@ namespace CapaVistas
         private PictureBox btnMinimize;
         private PictureBox btnCerrar;
         private Label labelTittle;
-        private Panel panelContenedor;
         private Panel panelMenu;
         private PictureBox btnSlide;
         private PictureBox picReportes;
@@ -525,7 +681,18 @@ namespace CapaVistas
         private Panel panel1;
         private Button btnProductos;
         private PictureBox logoISFT;
-        private PictureBox picFondo;
         private PictureBox picLogOut;
+        private PictureBox pictureBox2;
+        private Button btnUsuarios;
+        private Panel panel7;
+        private PictureBox pictureBox1;
+        private Button btnEmpleados;
+        private Panel panel6;
+        private Button btnUserLog;
+        private Panel panel8;
+        private PictureBox pictureBox3;
+        private Panel panelTitulo;
+        private Label lblTitulo;
+        private Panel panelChildFrm;
     }
 }
