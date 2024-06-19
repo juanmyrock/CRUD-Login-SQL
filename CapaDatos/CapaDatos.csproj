@@ -44,6 +44,8 @@
     <Compile Include="Conexion BD\cls_ConexionBD.cs" />
     <Compile Include="Conexion BD\cls_EjecutarQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Querys Login\cls_BloquearUserQ.cs" />
+    <Compile Include="Querys Login\cls_CambiarPassQ.cs" />
     <Compile Include="Querys Login\cls_ConectarUser.cs" />
     <Compile Include="Querys Login\cls_Permisos.cs" />
   </ItemGroup>

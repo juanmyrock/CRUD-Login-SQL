@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CapaDatos.Query_Login;
+using CapaDatos.Querys_Login;
+
 
 namespace CapaLogicaNegocio.Logica_Login
 {
     public class cls_BloquearUser
     {
+        public cls_BloquearUser(int idUsuario)
+    {
+        cls_BloquearUserQ Bloquear = new cls_BloquearUserQ();
+        Bloquear.BloquearUsuario(idUsuario);
     }
+}
 }

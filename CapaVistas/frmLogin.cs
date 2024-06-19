@@ -159,7 +159,7 @@ namespace CapaVistas
             cls_LogicaLogin BuscarUsuario = new cls_LogicaLogin();
 
             //Verificar las credenciales del usuario
-            if (BuscarUsuario.LoginUser(txtUsers.Text, txtPass.Text) == false) //La condicion envía los dos parámetros del método LoginUser en cls_LogicaLogin que son (user, pass)
+            if (BuscarUsuario.LoginUser(txtUsers.Text, txtUsers.Text + txtPass.Text) == false) //La condicion envía los dos parámetros del método LoginUser en cls_LogicaLogin que son (user, pass)
             {
                 MessageBox.Show("Usuario o Contraseña Inexistentes");
                 if (intentos < 3) //Bloquear al usuario si introdujo 3 intentos fallidos

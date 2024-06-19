@@ -24,6 +24,6 @@ namespace CapaSesion
         public static string ApellidoEmpleado { get; set; }
 
 
-        public static List<string> PermisosUsuario = new List<string>();
+        public static List<string> PermisosUsuario { get; set; } = new List<string>();
     }
 }

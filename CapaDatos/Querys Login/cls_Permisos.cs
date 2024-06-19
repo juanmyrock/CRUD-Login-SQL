@@ -33,18 +33,15 @@ namespace CapaDatos.Query_Login
                 // Verifica si se obtuvieron resultados
                 if (dt.Rows.Count > 0)
                 {
-                    cls_UserCache.PermisosUsuario = new List<string>();
-                    foreach (DataRow elemento in dt.Rows)
+                    cls_UserCache.PermisosUsuario.Clear(); // Limpiar la lista antes de agregar nuevos permisos
+                    foreach (DataRow row in dt.Rows)
                     {
-                        string rol = elemento["rol"].ToString();
-                        cls_UserCache.PermisosUsuario.Add(rol);
-                        Console.WriteLine(rol);
+                        cls_UserCache.PermisosUsuario.Add(row["rol"].ToString());
                     }
                     return true;
                 }
                 else
                 {
-                    cls_UserCache.PermisosUsuario = new List<string>();
                     return false;
                 }
             }

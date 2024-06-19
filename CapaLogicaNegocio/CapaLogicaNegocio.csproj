@@ -51,6 +51,10 @@
       <Project>{d27dbd29-ddc1-40f7-a887-84068727f521}</Project>
       <Name>CapaDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CapaServicios\CapaServicios.csproj">
+      <Project>{9139a664-1c88-4b63-82ab-49e003666cf2}</Project>
+      <Name>CapaServicios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaSesion\CapaSesion.csproj">
       <Project>{a11f80ac-a81d-4a22-a895-f315ad800a1e}</Project>
       <Name>CapaSesion</Name>
