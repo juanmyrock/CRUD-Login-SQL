@@ -151,6 +151,12 @@ namespace CapaVistas
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void lblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
         //private void btnAcceder_Click(object sender, EventArgs e)
         //{
         //    //Validar que los campos estén llenos

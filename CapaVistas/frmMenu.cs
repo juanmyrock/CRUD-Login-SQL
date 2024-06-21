@@ -1,8 +1,8 @@
 using System;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using CapaSistema;
+using CapaServicios;
 
 namespace CapaVistas
 {
@@ -112,6 +112,7 @@ namespace CapaVistas
             lblTitulo.Text = childForm.Text;
 
         }
+
 
         #region Botones del Menú y sus Forms
 

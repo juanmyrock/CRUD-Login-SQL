@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms Login\frmPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Login\frmPreguntas.designer.cs">
+      <DependentUpon>frmPreguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Login\frmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Login\frmRecuperarContraseña.designer.cs">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms Menu\frm_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,10 @@
       <Project>{f100bd99-bd64-4da1-89b4-7842be168f29}</Project>
       <Name>CapaLogicaNegocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CapaServicios\CapaServicios.csproj">
+      <Project>{9139a664-1c88-4b63-82ab-49e003666cf2}</Project>
+      <Name>CapaServicios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaSesion\CapaSesion.csproj">
       <Project>{a11f80ac-a81d-4a22-a895-f315ad800a1e}</Project>
       <Name>CapaSesion</Name>
@@ -93,6 +109,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms Login\frmPreguntas.resx">
+      <DependentUpon>frmPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Login\frmRecuperarContraseña.resx">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Menu\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,8 +132,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms Login\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

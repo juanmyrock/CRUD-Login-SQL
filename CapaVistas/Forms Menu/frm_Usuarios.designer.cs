@@ -162,7 +162,6 @@
             this.cboPermisos.Name = "cboPermisos";
             this.cboPermisos.Size = new System.Drawing.Size(230, 21);
             this.cboPermisos.TabIndex = 17;
-            this.cboPermisos.SelectedValueChanged += new System.EventHandler(this.cboPermisos_SelectedValueChanged);
             // 
             // btnCargar
             // 
@@ -172,7 +171,6 @@
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // textBox3
             // 
@@ -366,10 +364,6 @@
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // frm_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,7 +372,6 @@
             this.Controls.Add(this.tabAltaUsuario);
             this.Name = "frm_Usuario";
             this.Text = "frmUsuario";
-            this.Load += new System.EventHandler(this.frm_Usuario_Load_1);
             this.tabAltaUsuario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

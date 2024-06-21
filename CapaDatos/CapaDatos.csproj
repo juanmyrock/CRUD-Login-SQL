@@ -48,6 +48,7 @@
     <Compile Include="Querys Login\cls_CambiarPassQ.cs" />
     <Compile Include="Querys Login\cls_ConectarUser.cs" />
     <Compile Include="Querys Login\cls_Permisos.cs" />
+    <Compile Include="Servicios\cls_LlenarCombosQ.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaSesion\CapaSesion.csproj">
