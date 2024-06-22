@@ -1,4 +1,4 @@
-﻿namespace CV_Presentacion
+﻿namespace CapaVistas.Forms_Login
 {
     partial class frmPreguntas
     {

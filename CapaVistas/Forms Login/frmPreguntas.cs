@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace CV_Presentacion
+namespace CapaVistas.Forms_Login
 {
     public partial class frmPreguntas : Form
     {

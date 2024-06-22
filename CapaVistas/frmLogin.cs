@@ -154,7 +154,8 @@ namespace CapaVistas
 
         private void lblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            CapaVistas.Forms_Login.frmRecuperarContraseña frmForgot = new CapaVistas.Forms_Login.frmRecuperarContraseña();
+            frmForgot.ShowDialog();
         }
 
         //private void btnAcceder_Click(object sender, EventArgs e)

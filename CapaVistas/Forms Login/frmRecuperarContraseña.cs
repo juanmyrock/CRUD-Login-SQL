@@ -9,17 +9,36 @@ namespace CapaVistas.Forms_Login
     {
         //private UsuarioService usuarioService;
 
-        // Constructor que inicializa el formulario y la capa de servicios
         public frmRecuperarContraseña()
         {
             InitializeComponent();
             //usuarioService = new UsuarioService();
         }
+        private bool ValidarCampos() //Método para validar los campos del Login
+        {
+            string usuario = txtUsuario.Text;
+
+
+            if (txtUsuario.Text == "")
+            {
+                MsgError("Complete los campos Usuario y Contraseña");
+                return false;
+            }
+
+            return true;
+        }
+        private void MsgError(string msg) //Mensaje de error de validación de campos
+        {
+            lblErrorMsg.Text = msg;
+            lblErrorMsg.Visible = true;
+            picError.Visible = true;
+        }
+
 
         // Evento para el botón Cancelar que cierra el formulario actual y abre el formulario de login
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            CapaVistas.frmLogin login = new CapaVistas.frmLogin();
             this.Close();
             login.ShowDialog();
         }
@@ -27,14 +46,9 @@ namespace CapaVistas.Forms_Login
         // Evento para el botón Cerrar que cierra el formulario actual y abre el formulario de login
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            CapaVistas.frmLogin login = new CapaVistas.frmLogin();
             this.Close();
             login.ShowDialog();
-        }
-
-        // Evento de carga del formulario
-        private void frmRecuperarContraseña_Load(object sender, EventArgs e)
-        {
         }
 
         // Evento para el botón Aceptar que verifica si el usuario existe y muestra las preguntas de seguridad
@@ -62,6 +76,8 @@ namespace CapaVistas.Forms_Login
             //    {
             //        // Si el usuario no tiene preguntas cargadas, muestra un mensaje
             //        MessageBox.Show("El usuario no tiene preguntas cargadas.");
+                      //MsgError("El usuario no tiene preguntas cargadas.");
+                      //return false;
             //    }
             //}
             //else
