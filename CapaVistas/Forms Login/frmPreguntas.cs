@@ -22,19 +22,14 @@ namespace CapaVistas.Forms_Login
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             frmRecuperarContraseña recuperar = new frmRecuperarContraseña();
-            this.Close();
+            this.Dispose();
             recuperar.ShowDialog();
-        }
-
-        private void frmPreguntas_Load(object sender, EventArgs e)
-        {
-         
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             frmRecuperarContraseña recuperar = new frmRecuperarContraseña();
-            this.Close();
+            this.Dispose();
             recuperar.ShowDialog();
         }
     }

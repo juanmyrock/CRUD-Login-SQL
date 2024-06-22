@@ -38,8 +38,8 @@ namespace CapaVistas.Forms_Login
         // Evento para el botón Cancelar que cierra el formulario actual y abre el formulario de login
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            CapaVistas.frmLogin login = new CapaVistas.frmLogin();
-            this.Close();
+            frmLogin login = new frmLogin();
+            this.Dispose();
             login.ShowDialog();
         }
 
@@ -47,7 +47,7 @@ namespace CapaVistas.Forms_Login
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             CapaVistas.frmLogin login = new CapaVistas.frmLogin();
-            this.Close();
+            this.Dispose();
             login.ShowDialog();
         }
 
