@@ -76,80 +76,80 @@ namespace CapaDatos
 
 
 
-        public DataTable ConsultaReadSP(string nombreProcedimiento, List<SqlParameter> parametros) //Método para ejecutar un procedimiento almacenado que devuelve datos
-        {
-            DataTable datosTabla = new DataTable();
+        //public DataTable ConsultaReadSP(string nombreProcedimiento, List<SqlParameter> parametros) //Método para ejecutar un procedimiento almacenado que devuelve datos
+        //{
+        //    DataTable datosTabla = new DataTable();
 
-            try
-            {
-                using (SqlConnection conexion = GetConexion()) // La declaración using garantiza que los recursos se liberen después de usarse
-                {
-                    conexion.Open(); // Abre la conexión a la base de datos
+        //    try
+        //    {
+        //        using (SqlConnection conexion = GetConexion()) // La declaración using garantiza que los recursos se liberen después de usarse
+        //        {
+        //            conexion.Open(); // Abre la conexión a la base de datos
 
-                    using (SqlCommand comando = new SqlCommand(nombreProcedimiento, conexion))
-                    {
-                        comando.CommandType = CommandType.StoredProcedure; // Especifica que el comando es un procedimiento almacenado
+        //            using (SqlCommand comando = new SqlCommand(nombreProcedimiento, conexion))
+        //            {
+        //                comando.CommandType = CommandType.StoredProcedure; // Especifica que el comando es un procedimiento almacenado
 
-                        // Agregar parámetros al comando SQL
-                        if (parametros != null)
-                        {
-                            comando.Parameters.AddRange(parametros.ToArray()); // Añade los parámetros al comando
-                        }
+        //                // Agregar parámetros al comando SQL
+        //                if (parametros != null)
+        //                {
+        //                    comando.Parameters.AddRange(parametros.ToArray()); // Añade los parámetros al comando
+        //                }
 
-                        using (SqlDataReader lector = comando.ExecuteReader()) // Ejecuta el comando y obtiene un SqlDataReader
-                        {
-                            datosTabla.Load(lector); // Carga los datos del lector en el DataTable
-                        }
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                // Manejo de errores específicos de SQL
-                Console.WriteLine($"Error de SQL: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores generales
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-            return datosTabla; // Devuelve el DataTable con los resultados de la consulta
-        }
+        //                using (SqlDataReader lector = comando.ExecuteReader()) // Ejecuta el comando y obtiene un SqlDataReader
+        //                {
+        //                    datosTabla.Load(lector); // Carga los datos del lector en el DataTable
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        // Manejo de errores específicos de SQL
+        //        Console.WriteLine($"Error de SQL: {ex.Message}");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Manejo de errores generales
+        //        Console.WriteLine($"Error: {ex.Message}");
+        //    }
+        //    return datosTabla; // Devuelve el DataTable con los resultados de la consulta
+        //}
 
 
-        public void ConsultaWriteSP(string nombreProcedimiento, List<SqlParameter> parametros)  //Método para ejecutar un procedimiento almacenado que no devuelve datos
-        {
-            try
-            {
-                using (SqlConnection conexion = GetConexion()) // La declaración using garantiza que los recursos se liberen después de usarse
-                {
-                    conexion.Open(); // Abre la conexión a la base de datos
+        //public void ConsultaWriteSP(string nombreProcedimiento, List<SqlParameter> parametros)  //Método para ejecutar un procedimiento almacenado que no devuelve datos
+        //{
+        //    try
+        //    {
+        //        using (SqlConnection conexion = GetConexion()) // La declaración using garantiza que los recursos se liberen después de usarse
+        //        {
+        //            conexion.Open(); // Abre la conexión a la base de datos
 
-                    using (SqlCommand comando = new SqlCommand(nombreProcedimiento, conexion))
-                    {
-                        comando.CommandType = CommandType.StoredProcedure; // Especifica que el comando es un procedimiento almacenado
+        //            using (SqlCommand comando = new SqlCommand(nombreProcedimiento, conexion))
+        //            {
+        //                comando.CommandType = CommandType.StoredProcedure; // Especifica que el comando es un procedimiento almacenado
 
-                        // Agregar parámetros al comando SQL
-                        if (parametros != null)
-                        {
-                            comando.Parameters.AddRange(parametros.ToArray()); // Añade los parámetros al comando
-                        }
+        //                // Agregar parámetros al comando SQL
+        //                if (parametros != null)
+        //                {
+        //                    comando.Parameters.AddRange(parametros.ToArray()); // Añade los parámetros al comando
+        //                }
 
-                        comando.ExecuteNonQuery(); // Ejecuta el comando (sin devolver resultados)
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                // Manejo de errores específicos de SQL
-                Console.WriteLine($"Error de SQL: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores generales
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-        }
+        //                comando.ExecuteNonQuery(); // Ejecuta el comando (sin devolver resultados)
+        //            }
+        //        }
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        // Manejo de errores específicos de SQL
+        //        Console.WriteLine($"Error de SQL: {ex.Message}");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Manejo de errores generales
+        //        Console.WriteLine($"Error: {ex.Message}");
+        //    }
+        //}
 
     }
 }

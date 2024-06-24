@@ -55,7 +55,6 @@ namespace CapaVistas
             this.panelBtnProd = new System.Windows.Forms.Panel();
             this.btnEliminarProd = new System.Windows.Forms.Button();
             this.btnEditarProd = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenuProd = new System.Windows.Forms.Panel();
             this.textBoxStock = new System.Windows.Forms.TextBox();
             this.textBoxPrecio = new System.Windows.Forms.TextBox();
@@ -71,7 +70,6 @@ namespace CapaVistas
             this.lblNombreProd = new System.Windows.Forms.Label();
             this.textBoxNombreProd = new System.Windows.Forms.TextBox();
             this.panelBarraProd = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.labelProd = new System.Windows.Forms.Label();
             this.panelFondoProd = new System.Windows.Forms.Panel();
@@ -91,7 +89,6 @@ namespace CapaVistas
             // 
             this.panel6.Controls.Add(this.panelConteProd);
             this.panel6.Controls.Add(this.panelBtnProd);
-            this.panel6.Controls.Add(this.panel1);
             this.panel6.Controls.Add(this.panelMenuProd);
             this.panel6.Controls.Add(this.panelBarraProd);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -110,10 +107,10 @@ namespace CapaVistas
             this.panelConteProd.Controls.Add(this.panel3);
             this.panelConteProd.Controls.Add(this.panel2);
             this.panelConteProd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConteProd.Location = new System.Drawing.Point(240, 35);
+            this.panelConteProd.Location = new System.Drawing.Point(0, 35);
             this.panelConteProd.Margin = new System.Windows.Forms.Padding(2);
             this.panelConteProd.Name = "panelConteProd";
-            this.panelConteProd.Size = new System.Drawing.Size(780, 538);
+            this.panelConteProd.Size = new System.Drawing.Size(822, 538);
             this.panelConteProd.TabIndex = 5;
             // 
             // dGVProd
@@ -170,7 +167,7 @@ namespace CapaVistas
             this.dGVProd.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dGVProd.RowTemplate.Height = 28;
             this.dGVProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGVProd.Size = new System.Drawing.Size(736, 496);
+            this.dGVProd.Size = new System.Drawing.Size(778, 496);
             this.dGVProd.TabIndex = 0;
             // 
             // panel5
@@ -179,13 +176,13 @@ namespace CapaVistas
             this.panel5.Location = new System.Drawing.Point(22, 517);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(736, 21);
+            this.panel5.Size = new System.Drawing.Size(778, 21);
             this.panel5.TabIndex = 17;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(758, 21);
+            this.panel4.Location = new System.Drawing.Point(800, 21);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(22, 517);
@@ -207,7 +204,7 @@ namespace CapaVistas
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(780, 21);
+            this.panel2.Size = new System.Drawing.Size(822, 21);
             this.panel2.TabIndex = 14;
             // 
             // lblListaProd
@@ -231,10 +228,10 @@ namespace CapaVistas
             this.panelBtnProd.Controls.Add(this.btnEliminarProd);
             this.panelBtnProd.Controls.Add(this.btnEditarProd);
             this.panelBtnProd.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBtnProd.Location = new System.Drawing.Point(240, 573);
+            this.panelBtnProd.Location = new System.Drawing.Point(0, 573);
             this.panelBtnProd.Margin = new System.Windows.Forms.Padding(2);
             this.panelBtnProd.Name = "panelBtnProd";
-            this.panelBtnProd.Size = new System.Drawing.Size(780, 112);
+            this.panelBtnProd.Size = new System.Drawing.Size(822, 112);
             this.panelBtnProd.TabIndex = 2;
             // 
             // btnEliminarProd
@@ -277,15 +274,6 @@ namespace CapaVistas
             this.btnEditarProd.UseVisualStyleBackColor = false;
             this.btnEditarProd.Click += new System.EventHandler(this.btnEditarProd_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 35);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 650);
-            this.panel1.TabIndex = 4;
-            // 
             // panelMenuProd
             // 
             this.panelMenuProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -303,10 +291,10 @@ namespace CapaVistas
             this.panelMenuProd.Controls.Add(this.lblNombreProd);
             this.panelMenuProd.Controls.Add(this.textBoxNombreProd);
             this.panelMenuProd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMenuProd.Location = new System.Drawing.Point(1020, 35);
+            this.panelMenuProd.Location = new System.Drawing.Point(822, 35);
             this.panelMenuProd.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenuProd.Name = "panelMenuProd";
-            this.panelMenuProd.Size = new System.Drawing.Size(260, 650);
+            this.panelMenuProd.Size = new System.Drawing.Size(458, 650);
             this.panelMenuProd.TabIndex = 1;
             // 
             // textBoxStock
@@ -365,7 +353,7 @@ namespace CapaVistas
             this.pictureBoxProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxProd.Enabled = false;
             this.pictureBoxProd.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProd.Image")));
-            this.pictureBoxProd.Location = new System.Drawing.Point(98, 55);
+            this.pictureBoxProd.Location = new System.Drawing.Point(94, 56);
             this.pictureBoxProd.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxProd.Name = "pictureBoxProd";
             this.pictureBoxProd.Size = new System.Drawing.Size(63, 57);
@@ -481,7 +469,6 @@ namespace CapaVistas
             // panelBarraProd
             // 
             this.panelBarraProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
-            this.panelBarraProd.Controls.Add(this.panel7);
             this.panelBarraProd.Controls.Add(this.btnCerrar);
             this.panelBarraProd.Controls.Add(this.labelProd);
             this.panelBarraProd.Dock = System.Windows.Forms.DockStyle.Top;
@@ -490,16 +477,6 @@ namespace CapaVistas
             this.panelBarraProd.Name = "panelBarraProd";
             this.panelBarraProd.Size = new System.Drawing.Size(1280, 35);
             this.panelBarraProd.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(240, 35);
-            this.panel7.TabIndex = 7;
             // 
             // btnCerrar
             // 
@@ -523,7 +500,7 @@ namespace CapaVistas
             this.labelProd.Enabled = false;
             this.labelProd.Font = new System.Drawing.Font("Stencil", 18.32727F, System.Drawing.FontStyle.Bold);
             this.labelProd.ForeColor = System.Drawing.Color.White;
-            this.labelProd.Location = new System.Drawing.Point(692, 2);
+            this.labelProd.Location = new System.Drawing.Point(411, 2);
             this.labelProd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProd.Name = "labelProd";
             this.labelProd.Size = new System.Drawing.Size(184, 33);
@@ -542,7 +519,7 @@ namespace CapaVistas
             this.panelFondoProd.Size = new System.Drawing.Size(1280, 685);
             this.panelFondoProd.TabIndex = 15;
             // 
-            // FormProductos
+            // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -550,7 +527,7 @@ namespace CapaVistas
             this.Controls.Add(this.panelFondoProd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormProductos";
+            this.Name = "frmProductos";
             this.Text = "FormProductos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.panel6.ResumeLayout(false);
@@ -583,7 +560,6 @@ namespace CapaVistas
         private Panel panelBtnProd;
         private Button btnEliminarProd;
         private Button btnEditarProd;
-        private Panel panel1;
         private Panel panelMenuProd;
         private TextBox textBoxStock;
         private TextBox textBoxPrecio;
@@ -599,7 +575,6 @@ namespace CapaVistas
         private Label lblNombreProd;
         private TextBox textBoxNombreProd;
         private Panel panelBarraProd;
-        private Panel panel7;
         private PictureBox btnCerrar;
         private Label labelProd;
         private Panel panelFondoProd;

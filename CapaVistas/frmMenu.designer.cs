@@ -75,6 +75,7 @@ namespace CapaVistas
             this.logoISFT = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.btnCerrarForm = new System.Windows.Forms.PictureBox();
             this.panelChildFrm = new System.Windows.Forms.Panel();
             this.panelBarraClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
@@ -94,6 +95,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.picProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoISFT)).BeginInit();
             this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarraClose
@@ -292,7 +294,6 @@ namespace CapaVistas
             this.btnUsuarios.TabIndex = 25;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // panel7
             // 
@@ -333,6 +334,7 @@ namespace CapaVistas
             this.btnEmpleados.TabIndex = 22;
             this.btnEmpleados.Text = "  Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // panel6
             // 
@@ -591,22 +593,37 @@ namespace CapaVistas
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.29091F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitulo.Location = new System.Drawing.Point(460, 13);
+            this.lblTitulo.Location = new System.Drawing.Point(5, 13);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(119, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(97, 37);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "INICIO";
+            this.lblTitulo.Text = "Inicio";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
+            this.panelTitulo.Controls.Add(this.btnCerrarForm);
             this.panelTitulo.Controls.Add(this.lblTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(240, 35);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1040, 60);
             this.panelTitulo.TabIndex = 3;
+            // 
+            // btnCerrarForm
+            // 
+            this.btnCerrarForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarForm.Image")));
+            this.btnCerrarForm.Location = new System.Drawing.Point(994, 13);
+            this.btnCerrarForm.Name = "btnCerrarForm";
+            this.btnCerrarForm.Size = new System.Drawing.Size(35, 35);
+            this.btnCerrarForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrarForm.TabIndex = 29;
+            this.btnCerrarForm.TabStop = false;
+            this.btnCerrarForm.Visible = false;
+            this.btnCerrarForm.Click += new System.EventHandler(this.btnCerrarForm_Click);
             // 
             // panelChildFrm
             // 
@@ -651,6 +668,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.logoISFT)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -694,5 +712,6 @@ namespace CapaVistas
         private Panel panelTitulo;
         private Label lblTitulo;
         private Panel panelChildFrm;
+        private PictureBox btnCerrarForm;
     }
 }

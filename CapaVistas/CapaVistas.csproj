@@ -58,11 +58,11 @@
     <Compile Include="Forms Login\frmRecuperarContraseña.designer.cs">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Menu\frm_Usuarios.cs">
+    <Compile Include="Forms Menu\frmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Menu\frm_Usuarios.designer.cs">
-      <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    <Compile Include="Forms Menu\frmEmpleados.designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="Forms Login\frmRecuperarContraseña.resx">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Menu\frm_Usuarios.resx">
-      <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Forms Menu\frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

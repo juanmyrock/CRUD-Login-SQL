@@ -9,7 +9,8 @@ namespace CapaVistas
     public partial class frmMenu : Form
     {
         cls_ProdLogica logica_prod = new cls_ProdLogica(); //Instancio objeto para clase Logica Login
-        private Form activeForm;
+        private Form activeForm = null;
+
         public frmMenu()
         {
             InitializeComponent();
@@ -110,22 +111,29 @@ namespace CapaVistas
             childForm.BringToFront();
             childForm.Show();
             lblTitulo.Text = childForm.Text;
-
+            btnCerrarForm.Visible = true;
         }
-
+        private void btnCerrarForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                btnCerrarForm.Visible = false;
+                lblTitulo.Text = "Inicio";
+            }
+        }
 
         #region Botones del Menú y sus Forms
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
+        private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CapaVistas.Form_Menu.frm_Usuarios(), sender);
+            OpenChildForm(new CapaVistas.Form_Menu.frmEmpleados(), sender);
         }
-
 
 
         #endregion
 
-
+        
     }
 
 
