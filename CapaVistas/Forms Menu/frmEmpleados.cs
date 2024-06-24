@@ -15,78 +15,78 @@ namespace CapaVistas.Form_Menu
             this.Logica = new cls_Empleados();
         }
         #region Método para validar todos los campos completos
-        public bool ValidarCampos(out string mensaje)
-        {
-            mensaje = string.Empty;
+        //public bool ValidarCampos(out string mensaje)
+        //{
+        //    mensaje = string.Empty;
 
-            if (string.IsNullOrEmpty(Nombre))
-            {
-                mensaje = "El campo Nombre es obligatorio.";
-                return false;
-            }
+        //    if (string.IsNullOrEmpty(Nombre))
+        //    {
+        //        mensaje = "El campo Nombre es obligatorio.";
+        //        return false;
+        //    }
 
-            if (string.IsNullOrEmpty(Apellido))
-            {
-                mensaje = "El campo Apellido es obligatorio.";
-                return false;
-            }
+        //    if (string.IsNullOrEmpty(Apellido))
+        //    {
+        //        mensaje = "El campo Apellido es obligatorio.";
+        //        return false;
+        //    }
 
-            if (Id_Sexo <= 0)
-            {
-                mensaje = "Debe seleccionar un Sexo válido.";
-                return false;
-            }
+        //    if (Id_Sexo <= 0)
+        //    {
+        //        mensaje = "Debe seleccionar un Sexo válido.";
+        //        return false;
+        //    }
 
-            if (Id_Tipodni <= 0)
-            {
-                mensaje = "Debe seleccionar un Tipo de DNI válido.";
-                return false;
-            }
+        //    if (Id_Tipodni <= 0)
+        //    {
+        //        mensaje = "Debe seleccionar un Tipo de DNI válido.";
+        //        return false;
+        //    }
 
-            if (Dni <= 0)
-            {
-                mensaje = "El campo DNI es obligatorio.";
-                return false;
-            }
+        //    if (Dni <= 0)
+        //    {
+        //        mensaje = "El campo DNI es obligatorio.";
+        //        return false;
+        //    }
 
-            if (Fecha_Nac == default)
-            {
-                mensaje = "Debe seleccionar una Fecha de Nacimiento válida.";
-                return false;
-            }
+        //    if (Fecha_Nac == default)
+        //    {
+        //        mensaje = "Debe seleccionar una Fecha de Nacimiento válida.";
+        //        return false;
+        //    }
 
-            if (string.IsNullOrEmpty(Email))
-            {
-                mensaje = "El campo Email es obligatorio.";
-                return false;
-            }
+        //    if (string.IsNullOrEmpty(Email))
+        //    {
+        //        mensaje = "El campo Email es obligatorio.";
+        //        return false;
+        //    }
 
-            if (Id_Localidad <= 0)
-            {
-                mensaje = "Debe seleccionar una Localidad válida.";
-                return false;
-            }
+        //    if (Id_Localidad <= 0)
+        //    {
+        //        mensaje = "Debe seleccionar una Localidad válida.";
+        //        return false;
+        //    }
 
-            if (string.IsNullOrEmpty(Calle))
-            {
-                mensaje = "El campo Calle es obligatorio.";
-                return false;
-            }
+        //    if (string.IsNullOrEmpty(Calle))
+        //    {
+        //        mensaje = "El campo Calle es obligatorio.";
+        //        return false;
+        //    }
 
-            if (Numero_Calle <= 0)
-            {
-                mensaje = "El campo Número de Calle es obligatorio.";
-                return false;
-            }
+        //    if (Numero_Calle <= 0)
+        //    {
+        //        mensaje = "El campo Número de Calle es obligatorio.";
+        //        return false;
+        //    }
 
-            if (Id_Cargo <= 0)
-            {
-                mensaje = "Debe seleccionar un Cargo válido.";
-                return false;
-            }
+        //    if (Id_Cargo <= 0)
+        //    {
+        //        mensaje = "Debe seleccionar un Cargo válido.";
+        //        return false;
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
         #endregion
 
 
