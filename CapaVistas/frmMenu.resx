@@ -120,9 +120,6 @@
   <metadata name="labelTittle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="labelTittle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnMaximize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3220,7 +3217,7 @@
   <data name="btnConfigSist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGjHSURBVHhe7Z0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGjHSURBVHhe7Z0H
         eBVV+v/nTqiKFWlWVAQ0mZmE0BEISCAQSmYmF8UVRddFsXdsCGJZXRWwNyyoKFYUESuCgFIFsbs23NVt
         /911dXUrMP/zTg6/xZsXCMm9M+fM/X6e5/OsS5J7z8x5z7xnZk4xAACJImVY/iFGsVdpON6ZpuXeZDr+
         EynbWyx8L2V5v0vZ/l/Ff/8gDKTiv8W/hT8TvyN+l/7GtL0b6TPCz6LPpM8GAAAAgAKUjNzXsNy0absz
@@ -12546,7 +12543,7 @@
   <data name="picVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAdkAAAGoCAYAAAAKOZ9mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAiBpJREFUeF7tnQeYJFX19oXdJYMgQRQzilkxkVEMJMmIfAZUQPwbAQGzKAYUlGQO
+        wAAADsABataJCQAAiBpJREFUeF7tnQeYJFX19oXdJYMgQRQzilkxkVEMJMmIfAZUQPwbAQGzKAYUlGQO
         iGJEWRRBMghLUtIShCUsCyywO7A7M911762q7plZduf7vdXVQ+9s77KhZ6p7+rzP8z7VXV1ddercc8+5
         +T5reTA8PLwaXH369OlTSqXSBkmSPLdSqWxRKZdfFEXRS5xzL6tWqy/juOWAODCwpff+5WJvb+8rvOj9
         KwZgCOGV/f39r6pT3/v6+rbS7yPkev0v+29+H1H3ze6/5HNeoXs0cvR/R7N+/0bqvO5brb3Pi4d5T957

@@ -137,18 +137,23 @@ namespace CapaVistas
             }
         }
 
+
         #region Botones del Menú y sus Forms
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CapaVistas.Form_Menu.frmEmpleados(), sender);
         }
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CapaVistas.Form_Menu.frmUsuarios(), sender);
+        }
 
 
 
         #endregion
 
-        
+
     }
 
 

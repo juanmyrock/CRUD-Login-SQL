@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\cls_Empleados.cs" />
+    <Compile Include="Entidades\cls_Usuarios.cs" />
     <Compile Include="Llenar Combos\cls_LlenarCombos.cs" />
     <Compile Include="Logica Login\cls_BloquearUser.cs" />
     <Compile Include="Logica Login\cls_CambiarPass.cs" />
