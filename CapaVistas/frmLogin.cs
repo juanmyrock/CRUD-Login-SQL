@@ -18,8 +18,8 @@ namespace CapaVistas
         }
 
 
-        //private int intentos = 0;
-        //private string usuario = "";
+        private int intentos = 0;
+        private string usuario = "";
 
 
 
@@ -147,10 +147,10 @@ namespace CapaVistas
         }
 
 
-        private void btnAcceder_Click(object sender, EventArgs e) //para saltear las validaciones del login mientras diseñamos los forms
-        {
-            this.DialogResult = DialogResult.OK;
-        }
+        //private void btnAcceder_Click(object sender, EventArgs e) //para saltear las validaciones del login mientras diseñamos los forms
+        //{
+        //    this.DialogResult = DialogResult.OK;
+        //}
 
         private void lblForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -158,57 +158,57 @@ namespace CapaVistas
             frmForgot.ShowDialog();
         }
 
-        //private void btnAcceder_Click(object sender, EventArgs e)
-        //{
-        //    //Validar que los campos estén llenos
-        //    if (!ValidarCampos())
-        //    {
-        //        return; //Si no están llenos, salir del método 'Click'
-        //    }
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            //Validar que los campos estén llenos
+            if (!ValidarCampos())
+            {
+                return; //Si no están llenos, salir del método 'Click'
+            }
 
-        //    cls_LogicaLogin BuscarUsuario = new cls_LogicaLogin();
+            cls_LogicaLogin BuscarUsuario = new cls_LogicaLogin();
 
-        //    //Verificar las credenciales del usuario
-        //    if (BuscarUsuario.LoginUser(txtUsers.Text, /*txtUsers.Text +*/ txtPass.Text) == false) //La condicion envía los dos parámetros del método LoginUser en cls_LogicaLogin que son (user, pass)
-        //    {
-        //        MessageBox.Show("Usuario o Contraseña Inexistentes");
-        //        if (intentos < 3) //Bloquear al usuario si introdujo 3 intentos fallidos
-        //        {
-        //            if (intentos == 0)
-        //            {
-        //                usuario = txtUsers.Text;
-        //                intentos = 1;
-        //            }
-        //            else
-        //            {
-        //                if (usuario == txtUsers.Text)
-        //                {
-        //                    intentos++;
-        //                }
-        //            }
-        //        }
-        //        else
-        //        {
-        //            cls_BloquearUser Block = new cls_BloquearUser(usuario);
-        //        }
+            //Verificar las credenciales del usuario
+            if (BuscarUsuario.LoginUser(txtUsers.Text, /*txtUsers.Text +*/ txtPass.Text) == false) //La condicion envía los dos parámetros del método LoginUser en cls_LogicaLogin que son (user, pass)
+            {
+                MessageBox.Show("Usuario o Contraseña Inexistentes");
+                if (intentos < 3) //Bloquear al usuario si introdujo 3 intentos fallidos
+                {
+                    if (intentos == 0)
+                    {
+                        usuario = txtUsers.Text;
+                        intentos = 1;
+                    }
+                    else
+                    {
+                        if (usuario == txtUsers.Text)
+                        {
+                            intentos++;
+                        }
+                    }
+                }
+                else
+                {
+                    cls_BloquearUser Block = new cls_BloquearUser(usuario);
+                }
 
-        //    }
-        //    else
-        //    {   
-        //        // Mostrar mensaje de ingreso exitoso y permisos del usuario
-        //        string permisos = "";
-        //        foreach (string elemento in cls_UserCache.PermisosUsuario)
-        //        {
-        //            permisos += elemento + "\n";
-        //        }
+            }
+            else
+            {
+                // Mostrar mensaje de ingreso exitoso y permisos del usuario
+                string permisos = "";
+                foreach (string elemento in cls_UserCache.PermisosUsuario)
+                {
+                    permisos += elemento + "\n";
+                }
 
-        //        MessageBox.Show($"¡Ingreso Exitoso!\n\n{cls_UserCache.ApellidoEmpleado} {cls_UserCache.NombreEmpleado}\n\nPERMISOS:\n{permisos}");
+                MessageBox.Show($"¡Ingreso Exitoso!\n\n{cls_UserCache.ApellidoEmpleado} {cls_UserCache.NombreEmpleado}\n\nPERMISOS:\n{permisos}");
 
-        //        // Aca va el registro en la bitácora 
-        //        // clsBitacora Guardar = new clsBitacora("Ingreso al Sistema", "Ingreso Exitoso", "frmLoguin");
+                // Aca va el registro en la bitácora 
+                // clsBitacora Guardar = new clsBitacora("Ingreso al Sistema", "Ingreso Exitoso", "frmLoguin");
 
-        //        this.DialogResult = DialogResult.OK; // Cerrar el formulario de inicio de sesión
-        //    }
-        //}
+                this.DialogResult = DialogResult.OK; // Cerrar el formulario de inicio de sesión
+            }
+        }
     }
 }
