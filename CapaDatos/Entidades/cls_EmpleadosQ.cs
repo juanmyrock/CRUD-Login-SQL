@@ -16,10 +16,12 @@ namespace CapaDatos.Entidades
         public int Dni { get; set; }
         public DateTime Fecha_Nac { get; set; }
         public string Email { get; set; }
+        public int Telefono { get; set; }
         public int Id_Localidad { get; set; }
         public string Calle { get; set; }
         public int Numero_Calle { get; set; }
         public int Id_Cargo { get; set; }
+        public bool Estado { get; set; }
 
         // Métodos CRUD
         public DataTable ObtenerEmpleados(string datos)
@@ -57,8 +59,8 @@ namespace CapaDatos.Entidades
         {
             try
             {
-                string sSQL = "INSERT INTO Empleados (nombre, apellido, id_sexo, id_tipodni, dni, fecha_nac, email, id_localidad, calle, numero_calle, id_cargo) " +
-                              "VALUES (@nombre, @apellido, @id_sexo, @id_tipodni, @dni, @fecha_nac, @correo, @id_localidad, @calle, @numero_calle, @id_cargo)";
+                string sSQL = "INSERT INTO Empleados (nombre, apellido, id_sexo, id_tipodni, dni, fecha_nac, email, telefono, id_localidad, calle, numero_calle, id_cargo, estado) " +
+                              "VALUES (@nombre, @apellido, @id_sexo, @id_tipodni, @dni, @fecha_nac, @correo, @telefono, @id_localidad, @calle, @numero_calle, @id_cargo, @estado)";
                 List<SqlParameter> listaParametros = new List<SqlParameter>
                 {
                     new SqlParameter("@nombre", Nombre),
@@ -68,10 +70,12 @@ namespace CapaDatos.Entidades
                     new SqlParameter("@dni", Dni),
                     new SqlParameter("@fecha_nac", Fecha_Nac),
                     new SqlParameter("@correo", Email),
+                    new SqlParameter("@telefono", Telefono),
                     new SqlParameter("@id_localidad", Id_Localidad),
                     new SqlParameter("@calle", Calle),
                     new SqlParameter("@numero_calle", Numero_Calle),
-                    new SqlParameter("@id_cargo", Id_Cargo)
+                    new SqlParameter("@id_cargo", Id_Cargo),
+                    new SqlParameter("@estado", Estado)
                 };
                 ConsultaWrite(sSQL, listaParametros);
             }
@@ -92,27 +96,29 @@ namespace CapaDatos.Entidades
             {
                 string sSQL = "UPDATE Empleados SET nombre = @nombre, apellido = @apellido, " +
                               "id_sexo = @id_sexo, id_tipodni = @id_tipodni, dni = @dni, " +
-                              "fecha_nac = @fecha_nac, email = @correo, id_localidad = @id_localidad, " +
-                              "calle = @calle, numero_calle = @numero_calle, id_cargo = @id_cargo " +
+                              "fecha_nac = @fecha_nac, email = @correo, telefono = @telefono, id_localidad = @id_localidad, " +
+                              "calle = @calle, numero_calle = @numero_calle, id_cargo = @id_cargo, estado = @estado " +
                               "WHERE id_empleado = @id_empleado";
 
                 List<SqlParameter> listaParametros = new List<SqlParameter>
-        {
-            new SqlParameter("@id_empleado", Id_Empleado),
-            new SqlParameter("@nombre", Nombre),
-            new SqlParameter("@apellido", Apellido),
-            new SqlParameter("@id_sexo", Id_Sexo),
-            new SqlParameter("@id_tipodni", Id_Tipodni),
-            new SqlParameter("@dni", Dni),
-            new SqlParameter("@fecha_nac", Fecha_Nac),
-            new SqlParameter("@correo", Email),
-            new SqlParameter("@id_localidad", Id_Localidad),
-            new SqlParameter("@calle", Calle),
-            new SqlParameter("@numero_calle", Numero_Calle),
-            new SqlParameter("@id_cargo", Id_Cargo)
-        };
+                {
+                    new SqlParameter("@id_empleado", Id_Empleado),
+                    new SqlParameter("@nombre", Nombre),
+                    new SqlParameter("@apellido", Apellido),
+                    new SqlParameter("@id_sexo", Id_Sexo),
+                    new SqlParameter("@id_tipodni", Id_Tipodni),
+                    new SqlParameter("@dni", Dni),
+                    new SqlParameter("@fecha_nac", Fecha_Nac),
+                    new SqlParameter("@correo", Email),
+                    new SqlParameter("@telefono", Telefono),
+                    new SqlParameter("@id_localidad", Id_Localidad),
+                    new SqlParameter("@calle", Calle),
+                    new SqlParameter("@numero_calle", Numero_Calle),
+                    new SqlParameter("@id_cargo", Id_Cargo),
+                    new SqlParameter("@estado", Estado)
+                };
 
-                ConsultaWrite(sSQL, listaParametros);
+                    ConsultaWrite(sSQL, listaParametros);
             }
             catch (SqlException ex)
             {

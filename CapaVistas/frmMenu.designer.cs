@@ -46,6 +46,7 @@ namespace CapaVistas
             this.btnOcultar = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnConfigSist = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnUserLog = new System.Windows.Forms.Button();
@@ -72,7 +73,7 @@ namespace CapaVistas
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
-            this.logoISFT = new System.Windows.Forms.PictureBox();
+            this.logoMenu = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.btnCerrarForm = new System.Windows.Forms.PictureBox();
@@ -83,6 +84,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfigSist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,7 +95,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.picClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoISFT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarForm)).BeginInit();
             this.SuspendLayout();
@@ -125,9 +127,9 @@ namespace CapaVistas
             this.labelTittle.Location = new System.Drawing.Point(380, 1);
             this.labelTittle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTittle.Name = "labelTittle";
-            this.labelTittle.Size = new System.Drawing.Size(600, 38);
+            this.labelTittle.Size = new System.Drawing.Size(669, 38);
             this.labelTittle.TabIndex = 4;
-            this.labelTittle.Text = "BUS MANAGER: SISTEMA DE GESTIÓN";
+            this.labelTittle.Text = "GESTOR DE PRODUCTOS: DISTRIBUIDORA";
             this.labelTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMaximize
@@ -189,6 +191,7 @@ namespace CapaVistas
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
+            this.panelMenu.Controls.Add(this.btnConfigSist);
             this.panelMenu.Controls.Add(this.pictureBox3);
             this.panelMenu.Controls.Add(this.panel8);
             this.panelMenu.Controls.Add(this.btnUserLog);
@@ -215,13 +218,28 @@ namespace CapaVistas
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Controls.Add(this.btnProductos);
-            this.panelMenu.Controls.Add(this.logoISFT);
+            this.panelMenu.Controls.Add(this.logoMenu);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 35);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(240, 760);
             this.panelMenu.TabIndex = 3;
+            // 
+            // btnConfigSist
+            // 
+            this.btnConfigSist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfigSist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfigSist.Image = ((System.Drawing.Image)(resources.GetObject("btnConfigSist.Image")));
+            this.btnConfigSist.Location = new System.Drawing.Point(190, 715);
+            this.btnConfigSist.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfigSist.Name = "btnConfigSist";
+            this.btnConfigSist.Size = new System.Drawing.Size(45, 45);
+            this.btnConfigSist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnConfigSist.TabIndex = 29;
+            this.btnConfigSist.TabStop = false;
+            this.btnConfigSist.MouseLeave += new System.EventHandler(this.btnConfigSist_MouseLeave);
+            this.btnConfigSist.MouseHover += new System.EventHandler(this.btnConfigSist_MouseHover);
             // 
             // pictureBox3
             // 
@@ -473,7 +491,7 @@ namespace CapaVistas
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(228, 40);
             this.btnFacturas.TabIndex = 13;
-            this.btnFacturas.Text = "Almacén";
+            this.btnFacturas.Text = "Facturas";
             this.btnFacturas.UseVisualStyleBackColor = false;
             // 
             // btnClientes
@@ -490,7 +508,7 @@ namespace CapaVistas
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(228, 40);
             this.btnClientes.TabIndex = 12;
-            this.btnClientes.Text = "Registros";
+            this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
             // 
             // btnVentas
@@ -507,7 +525,7 @@ namespace CapaVistas
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(228, 40);
             this.btnVentas.TabIndex = 11;
-            this.btnVentas.Text = "       Configuración";
+            this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
             // 
             // panel5
@@ -570,21 +588,21 @@ namespace CapaVistas
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(228, 40);
             this.btnProductos.TabIndex = 1;
-            this.btnProductos.Text = "Vehículos";
+            this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
             // 
-            // logoISFT
+            // logoMenu
             // 
-            this.logoISFT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoISFT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoISFT.Image = ((System.Drawing.Image)(resources.GetObject("logoISFT.Image")));
-            this.logoISFT.Location = new System.Drawing.Point(0, 0);
-            this.logoISFT.Margin = new System.Windows.Forms.Padding(2);
-            this.logoISFT.Name = "logoISFT";
-            this.logoISFT.Size = new System.Drawing.Size(240, 201);
-            this.logoISFT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoISFT.TabIndex = 0;
-            this.logoISFT.TabStop = false;
+            this.logoMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoMenu.Image = ((System.Drawing.Image)(resources.GetObject("logoMenu.Image")));
+            this.logoMenu.Location = new System.Drawing.Point(0, 0);
+            this.logoMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.logoMenu.Name = "logoMenu";
+            this.logoMenu.Size = new System.Drawing.Size(240, 201);
+            this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoMenu.TabIndex = 0;
+            this.logoMenu.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -655,6 +673,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfigSist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -665,7 +684,7 @@ namespace CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.picClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoISFT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarForm)).EndInit();
@@ -698,7 +717,7 @@ namespace CapaVistas
         private Panel panel2;
         private Panel panel1;
         private Button btnProductos;
-        private PictureBox logoISFT;
+        private PictureBox logoMenu;
         private PictureBox picLogOut;
         private PictureBox pictureBox2;
         private Button btnUsuarios;
@@ -713,5 +732,6 @@ namespace CapaVistas
         private Label lblTitulo;
         private Panel panelChildFrm;
         private PictureBox btnCerrarForm;
+        private PictureBox btnConfigSist;
     }
 }

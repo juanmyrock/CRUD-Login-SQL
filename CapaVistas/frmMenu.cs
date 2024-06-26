@@ -1,8 +1,9 @@
 using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using CapaSistema;
-using CapaServicios;
+
 
 namespace CapaVistas
 {
@@ -64,7 +65,7 @@ namespace CapaVistas
         }
         #endregion
 
-        #region Config Botones Menú
+        #region Config y Estilos Botones Menú
         //private void btnSlide_Click(object sender, EventArgs e) //para minimizar el panel de menú y acomodar los íconos
         //{
         //    if (panelMenu.Width == 240)
@@ -93,6 +94,19 @@ namespace CapaVistas
                 }
 
             }
+        }
+        private void btnConfigSist_MouseHover(object sender, EventArgs e)
+        {
+            btnConfigSist.Width = 65;
+            btnConfigSist.Height = 65;
+            btnConfigSist.Location = new Point(181, 704);
+        }
+
+        private void btnConfigSist_MouseLeave(object sender, EventArgs e)
+        {
+            btnConfigSist.Width = 45;
+            btnConfigSist.Height = 45;
+            btnConfigSist.Location = new Point(190, 715);
         }
         #endregion
 
@@ -129,6 +143,7 @@ namespace CapaVistas
         {
             OpenChildForm(new CapaVistas.Form_Menu.frmEmpleados(), sender);
         }
+
 
 
         #endregion
