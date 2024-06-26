@@ -129,6 +129,7 @@
             this.btnRefreshBaja = new System.Windows.Forms.Button();
             this.btnRefreshModif = new System.Windows.Forms.Button();
             this.btnCargarListaModif = new System.Windows.Forms.Button();
+            this.btnCargarEmpBaja = new System.Windows.Forms.Button();
             this.tabVerEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmp)).BeginInit();
             this.tabSelector.SuspendLayout();
@@ -537,6 +538,7 @@
             // 
             // tabBajaEmp
             // 
+            this.tabBajaEmp.Controls.Add(this.btnCargarEmpBaja);
             this.tabBajaEmp.Controls.Add(this.btnRefreshBaja);
             this.tabBajaEmp.Controls.Add(this.groupBox1);
             this.tabBajaEmp.Controls.Add(this.label27);
@@ -577,7 +579,8 @@
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.cmbLocalidadBaja);
             this.groupBox1.Controls.Add(this.cmbTipoDNIBaja);
-            this.groupBox1.Location = new System.Drawing.Point(31, 60);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(31, 417);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(952, 167);
             this.groupBox1.TabIndex = 43;
@@ -815,11 +818,12 @@
             this.btnEliminarEmp.TabIndex = 41;
             this.btnEliminarEmp.Text = "Eliminar";
             this.btnEliminarEmp.UseVisualStyleBackColor = true;
+            this.btnEliminarEmp.Click += new System.EventHandler(this.btnEliminarEmp_Click);
             // 
             // dgvVerEmpBaja
             // 
             this.dgvVerEmpBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVerEmpBaja.Location = new System.Drawing.Point(31, 252);
+            this.dgvVerEmpBaja.Location = new System.Drawing.Point(31, 49);
             this.dgvVerEmpBaja.MultiSelect = false;
             this.dgvVerEmpBaja.Name = "dgvVerEmpBaja";
             this.dgvVerEmpBaja.ReadOnly = true;
@@ -828,6 +832,7 @@
             this.dgvVerEmpBaja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVerEmpBaja.Size = new System.Drawing.Size(952, 324);
             this.dgvVerEmpBaja.TabIndex = 40;
+            this.dgvVerEmpBaja.SelectionChanged += new System.EventHandler(this.dgvVerEmpBaja_SelectionChanged);
             // 
             // tabModifEmp
             // 
@@ -1128,7 +1133,7 @@
             // 
             // btnRefreshBaja
             // 
-            this.btnRefreshBaja.Location = new System.Drawing.Point(31, 590);
+            this.btnRefreshBaja.Location = new System.Drawing.Point(888, 20);
             this.btnRefreshBaja.Name = "btnRefreshBaja";
             this.btnRefreshBaja.Size = new System.Drawing.Size(95, 23);
             this.btnRefreshBaja.TabIndex = 44;
@@ -1156,6 +1161,17 @@
             this.btnCargarListaModif.Text = "Cargar Lista";
             this.btnCargarListaModif.UseVisualStyleBackColor = true;
             this.btnCargarListaModif.Click += new System.EventHandler(this.btnCargarListaModif_Click);
+            // 
+            // btnCargarEmpBaja
+            // 
+            this.btnCargarEmpBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarEmpBaja.Location = new System.Drawing.Point(265, 379);
+            this.btnCargarEmpBaja.Name = "btnCargarEmpBaja";
+            this.btnCargarEmpBaja.Size = new System.Drawing.Size(491, 32);
+            this.btnCargarEmpBaja.TabIndex = 45;
+            this.btnCargarEmpBaja.Text = "Cargar Lista";
+            this.btnCargarEmpBaja.UseVisualStyleBackColor = true;
+            this.btnCargarEmpBaja.Click += new System.EventHandler(this.btnCargarEmpBaja_Click);
             // 
             // frmEmpleados
             // 
@@ -1290,5 +1306,6 @@
         private System.Windows.Forms.Button btnRefreshBaja;
         private System.Windows.Forms.Button btnRefreshModif;
         private System.Windows.Forms.Button btnCargarListaModif;
+        private System.Windows.Forms.Button btnCargarEmpBaja;
     }
 }

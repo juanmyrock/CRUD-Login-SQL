@@ -206,11 +206,6 @@ namespace CapaVistas.Form_Menu
                 mensaje = "Debe seleccionar un Cargo válido.";
                 return false;
             }
-            if (!chkEstadoModif.Checked || chkEstadoModif.CheckState == CheckState.Indeterminate)
-            {
-                mensaje = "Debe marcar el estado del empleado. (Activo o Inactivo";
-                return false;
-            }
 
 
             return true;
@@ -391,13 +386,58 @@ namespace CapaVistas.Form_Menu
         #region Tab Baja de Empleado
         private void btnRefreshBaja_Click(object sender, EventArgs e)
         {
+            if (dgvVerEmpBaja.DataSource != null)
+            {
+                dgvVerEmpBaja.DataSource = null;
+                TraerTodos(dgvVerEmpBaja);
+            }
+        }
+        private void btnCargarEmpBaja_Click(object sender, EventArgs e)
+        {
             TraerTodos(dgvVerEmpBaja);
         }
 
 
 
+
         #endregion
 
-        
+        private void dgvVerEmpBaja_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvVerEmpBaja.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgvVerEmpBaja.SelectedRows[0];
+                EmpleadoSeleccionadoId = Convert.ToInt32(row.Cells["id_empleado"].Value);
+
+                // Asignar los datos de la fila seleccionada a los controles correspondientes
+                txtNombreBaja.Text = row.Cells["nombre"].Value.ToString();
+                txtApellidoBaja.Text = row.Cells["apellido"].Value.ToString();
+                cmbSexoBaja.SelectedValue = row.Cells["id_sexo"].Value;
+                cmbTipoDNIBaja.SelectedValue = row.Cells["id_tipodni"].Value;
+                txtDNIBaja.Text = row.Cells["dni"].Value.ToString();
+                dateNacimientoBaja.Value = Convert.ToDateTime(row.Cells["fecha_nac"].Value);
+                txtEmailBaja.Text = row.Cells["email"].Value.ToString();
+                txtCelularBaja.Text = row.Cells["telefono"].Value.ToString();
+                cmbLocalidadBaja.SelectedValue = row.Cells["id_localidad"].Value;
+                txtCalleBaja.Text = row.Cells["calle"].Value.ToString();
+                txtNumCalleBaja.Text = row.Cells["numero_calle"].Value.ToString();
+                cmbCargoBaja.SelectedValue = row.Cells["id_cargo"].Value;
+                chkEstadoBaja.Checked = Convert.ToBoolean(row.Cells["estado"].Value);
+            }
+        }
+
+        private void btnEliminarEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                empleado.EliminarEmpleado(EmpleadoSeleccionadoId);
+                MessageBox.Show("Empleado Eliminado Correctamente");
+                TraerTodos(dgvVerEmpBaja);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un Error: {ex.Message}");
+            }
+        }
     }
 }
