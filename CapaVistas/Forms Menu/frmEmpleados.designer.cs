@@ -36,6 +36,7 @@
             this.dgvVerEmp = new System.Windows.Forms.DataGridView();
             this.tabSelector = new System.Windows.Forms.TabControl();
             this.tabAltaEmp = new System.Windows.Forms.TabPage();
+            this.btnVerAlta = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
@@ -60,10 +61,9 @@
             this.cmbLocalidad = new System.Windows.Forms.ComboBox();
             this.cmbTipoDNI = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAgregarEmp = new System.Windows.Forms.Button();
+            this.dgvVerEmpAlta = new System.Windows.Forms.DataGridView();
             this.tabBajaEmp = new System.Windows.Forms.TabPage();
-            this.tabModifEmp = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -90,6 +90,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabModifEmp = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -121,11 +122,11 @@
             this.tabSelector.SuspendLayout();
             this.tabAltaEmp.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpAlta)).BeginInit();
             this.tabBajaEmp.SuspendLayout();
-            this.tabModifEmp.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabModifEmp.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -219,10 +220,11 @@
             // 
             // tabAltaEmp
             // 
+            this.tabAltaEmp.Controls.Add(this.btnVerAlta);
             this.tabAltaEmp.Controls.Add(this.groupBox5);
             this.tabAltaEmp.Controls.Add(this.label9);
-            this.tabAltaEmp.Controls.Add(this.button4);
-            this.tabAltaEmp.Controls.Add(this.dataGridView1);
+            this.tabAltaEmp.Controls.Add(this.btnAgregarEmp);
+            this.tabAltaEmp.Controls.Add(this.dgvVerEmpAlta);
             this.tabAltaEmp.Location = new System.Drawing.Point(4, 22);
             this.tabAltaEmp.Name = "tabAltaEmp";
             this.tabAltaEmp.Padding = new System.Windows.Forms.Padding(3);
@@ -230,6 +232,16 @@
             this.tabAltaEmp.TabIndex = 5;
             this.tabAltaEmp.Text = "Alta";
             this.tabAltaEmp.UseVisualStyleBackColor = true;
+            // 
+            // btnVerAlta
+            // 
+            this.btnVerAlta.Location = new System.Drawing.Point(31, 590);
+            this.btnVerAlta.Name = "btnVerAlta";
+            this.btnVerAlta.Size = new System.Drawing.Size(75, 23);
+            this.btnVerAlta.TabIndex = 40;
+            this.btnVerAlta.Text = "Ver";
+            this.btnVerAlta.UseVisualStyleBackColor = true;
+            this.btnVerAlta.Click += new System.EventHandler(this.btnVerAlta_Click);
             // 
             // groupBox5
             // 
@@ -456,23 +468,27 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Nuevo Empleado";
             // 
-            // button4
+            // btnAgregarEmp
             // 
-            this.button4.Location = new System.Drawing.Point(871, 590);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAgregarEmp.Location = new System.Drawing.Point(871, 590);
+            this.btnAgregarEmp.Name = "btnAgregarEmp";
+            this.btnAgregarEmp.Size = new System.Drawing.Size(112, 23);
+            this.btnAgregarEmp.TabIndex = 9;
+            this.btnAgregarEmp.Text = "Agregar";
+            this.btnAgregarEmp.UseVisualStyleBackColor = true;
+            this.btnAgregarEmp.Click += new System.EventHandler(this.btnAgregarEmp_Click);
             // 
-            // dataGridView1
+            // dgvVerEmpAlta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 252);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 47;
-            this.dataGridView1.Size = new System.Drawing.Size(952, 324);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvVerEmpAlta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerEmpAlta.Location = new System.Drawing.Point(31, 252);
+            this.dgvVerEmpAlta.Name = "dgvVerEmpAlta";
+            this.dgvVerEmpAlta.ReadOnly = true;
+            this.dgvVerEmpAlta.RowHeadersVisible = false;
+            this.dgvVerEmpAlta.RowHeadersWidth = 47;
+            this.dgvVerEmpAlta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVerEmpAlta.Size = new System.Drawing.Size(952, 324);
+            this.dgvVerEmpAlta.TabIndex = 4;
             // 
             // tabBajaEmp
             // 
@@ -487,20 +503,6 @@
             this.tabBajaEmp.TabIndex = 6;
             this.tabBajaEmp.Text = "Baja";
             this.tabBajaEmp.UseVisualStyleBackColor = true;
-            // 
-            // tabModifEmp
-            // 
-            this.tabModifEmp.Controls.Add(this.groupBox2);
-            this.tabModifEmp.Controls.Add(this.label36);
-            this.tabModifEmp.Controls.Add(this.button2);
-            this.tabModifEmp.Controls.Add(this.dataGridView3);
-            this.tabModifEmp.Location = new System.Drawing.Point(4, 22);
-            this.tabModifEmp.Name = "tabModifEmp";
-            this.tabModifEmp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabModifEmp.Size = new System.Drawing.Size(1014, 630);
-            this.tabModifEmp.TabIndex = 7;
-            this.tabModifEmp.Text = "Modificar";
-            this.tabModifEmp.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -744,6 +746,20 @@
             this.dataGridView2.RowHeadersWidth = 47;
             this.dataGridView2.Size = new System.Drawing.Size(952, 324);
             this.dataGridView2.TabIndex = 40;
+            // 
+            // tabModifEmp
+            // 
+            this.tabModifEmp.Controls.Add(this.groupBox2);
+            this.tabModifEmp.Controls.Add(this.label36);
+            this.tabModifEmp.Controls.Add(this.button2);
+            this.tabModifEmp.Controls.Add(this.dataGridView3);
+            this.tabModifEmp.Location = new System.Drawing.Point(4, 22);
+            this.tabModifEmp.Name = "tabModifEmp";
+            this.tabModifEmp.Padding = new System.Windows.Forms.Padding(3);
+            this.tabModifEmp.Size = new System.Drawing.Size(1014, 630);
+            this.tabModifEmp.TabIndex = 7;
+            this.tabModifEmp.Text = "Modificar";
+            this.tabModifEmp.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -1004,14 +1020,14 @@
             this.tabAltaEmp.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerEmpAlta)).EndInit();
             this.tabBajaEmp.ResumeLayout(false);
             this.tabBajaEmp.PerformLayout();
-            this.tabModifEmp.ResumeLayout(false);
-            this.tabModifEmp.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabModifEmp.ResumeLayout(false);
+            this.tabModifEmp.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -1024,8 +1040,8 @@
         private System.Windows.Forms.TabControl tabSelector;
         private System.Windows.Forms.TabPage tabAltaEmp;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAgregarEmp;
+        private System.Windows.Forms.DataGridView dgvVerEmpAlta;
         private System.Windows.Forms.TabPage tabBajaEmp;
         private System.Windows.Forms.TabPage tabModifEmp;
         private System.Windows.Forms.DataGridView dgvVerEmp;
@@ -1108,5 +1124,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button btnVerAlta;
     }
 }

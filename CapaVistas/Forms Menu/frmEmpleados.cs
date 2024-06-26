@@ -1,105 +1,125 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using CapaLogicaNegocio.Entidades;
+using CapaLogicaNegocio.Llenar_Combos;
 
 namespace CapaVistas.Form_Menu
 {
     public partial class frmEmpleados : Form
     {
-        private cls_Empleados Logica;
-        cls_Empleados empleado = new cls_Empleados();
+
+        private cls_Empleados empleado = new cls_Empleados();
 
         public frmEmpleados()
         {
             InitializeComponent();
-            this.Logica = new cls_Empleados();
+            LlenarCombos();
         }
+
+        private void LlenarCombos()
+        {
+            // Llenar ComboBox de Sexos
+            cls_LlenarCombos CMBSexo = new cls_LlenarCombos(cmbSexo, "Sexos", "id_sexos", "sexo");
+
+            // Llenar ComboBox de Tipos de DNI
+            cls_LlenarCombos CMBTipoDNI = new cls_LlenarCombos(cmbTipoDNI, "TiposDocumentos", "id_tipodni", "tipodni");
+
+            // Llenar ComboBox de Localidades
+            cls_LlenarCombos CMBLocalidad = new cls_LlenarCombos(cmbLocalidad, "Localidades", "id_localidad", "localidad");
+
+            // Llenar ComboBox de Cargos
+            cls_LlenarCombos CMBCargo = new cls_LlenarCombos(cmbCargo, "Cargos", "id_cargos", "cargos");
+        }
+
+
         #region Método para validar todos los campos completos
-        //public bool ValidarCampos(out string mensaje)
-        //{
-        //    mensaje = string.Empty;
+        public bool ValidarCampos(out string mensaje)
+        {
+            mensaje = string.Empty;
 
-        //    if (string.IsNullOrEmpty(Nombre))
-        //    {
-        //        mensaje = "El campo Nombre es obligatorio.";
-        //        return false;
-        //    }
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                mensaje = "El campo Nombre es obligatorio.";
+                return false;
+            }
 
-        //    if (string.IsNullOrEmpty(Apellido))
-        //    {
-        //        mensaje = "El campo Apellido es obligatorio.";
-        //        return false;
-        //    }
+            if (string.IsNullOrEmpty(txtApellido.Text))
+            {
+                mensaje = "El campo Apellido es obligatorio.";
+                return false;
+            }
 
-        //    if (Id_Sexo <= 0)
-        //    {
-        //        mensaje = "Debe seleccionar un Sexo válido.";
-        //        return false;
-        //    }
+            if (cmbSexo.SelectedIndex == -1 )
+            {
+                mensaje = "Debe seleccionar un Sexo válido.";
+                return false;
+            }
 
-        //    if (Id_Tipodni <= 0)
-        //    {
-        //        mensaje = "Debe seleccionar un Tipo de DNI válido.";
-        //        return false;
-        //    }
+            if (cmbTipoDNI.SelectedIndex == -1)
+            {
+                mensaje = "Debe seleccionar un Tipo de DNI válido.";
+                return false;
+            }
 
-        //    if (Dni <= 0)
-        //    {
-        //        mensaje = "El campo DNI es obligatorio.";
-        //        return false;
-        //    }
+            if (string.IsNullOrEmpty(txtDNI.Text))
+            {
+                mensaje = "El campo DNI es obligatorio.";
+                return false;
+            }
 
-        //    if (Fecha_Nac == default)
-        //    {
-        //        mensaje = "Debe seleccionar una Fecha de Nacimiento válida.";
-        //        return false;
-        //    }
+            if (dateNacimiento.Value == default)
+            {
+                mensaje = "Debe seleccionar una Fecha de Nacimiento válida.";
+                return false;
+            }
 
-        //    if (string.IsNullOrEmpty(Email))
-        //    {
-        //        mensaje = "El campo Email es obligatorio.";
-        //        return false;
-        //    }
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                mensaje = "El campo Email es obligatorio.";
+                return false;
+            }
 
-        //    if (Id_Localidad <= 0)
-        //    {
-        //        mensaje = "Debe seleccionar una Localidad válida.";
-        //        return false;
-        //    }
+            if (cmbLocalidad.SelectedIndex == -1)
+            {
+                mensaje = "Debe seleccionar una Localidad válida.";
+                return false;
+            }
 
-        //    if (string.IsNullOrEmpty(Calle))
-        //    {
-        //        mensaje = "El campo Calle es obligatorio.";
-        //        return false;
-        //    }
+            if (string.IsNullOrEmpty(txtCalle.Text))
+            {
+                mensaje = "El campo Calle es obligatorio.";
+                return false;
+            }
 
-        //    if (Numero_Calle <= 0)
-        //    {
-        //        mensaje = "El campo Número de Calle es obligatorio.";
-        //        return false;
-        //    }
+            if (string.IsNullOrEmpty(txtNumCalle.Text))
+            {
+                mensaje = "El campo Número de Calle es obligatorio.";
+                return false;
+            }
 
-        //    if (Id_Cargo <= 0)
-        //    {
-        //        mensaje = "Debe seleccionar un Cargo válido.";
-        //        return false;
-        //    }
+            if (cmbCargo.SelectedIndex == -1)
+            {
+                mensaje = "Debe seleccionar un Cargo válido.";
+                return false;
+            }
 
-        //    return true;
-        //}
+            return true;
+        }
         #endregion
 
 
         #region Tab Ver Empleados        
-        private void TraerTodos(string datos = null)
+        private void TraerTodos(DataGridView dgv, string datos = null)
         {
-            dgvVerEmp.DataSource = null;
-            dgvVerEmp.DataSource = empleado.VerEmpleados(datos);
+            dgv.DataSource = null;
+            dgv.DataSource = empleado.VerEmpleados(datos);
         }
+
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            TraerTodos();
+            TraerTodos(dgvVerEmp);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -112,15 +132,28 @@ namespace CapaVistas.Form_Menu
             if (dgvVerEmp.DataSource != null)
             {
                 dgvVerEmp.DataSource = null;
-                TraerTodos();
+                TraerTodos(dgvVerEmp);
             }
         }
         #endregion
 
         #region Tab Alta Empleados
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnVerAlta_Click(object sender, EventArgs e)
         {
+            TraerTodos(dgvVerEmpAlta);
+        }
+        private void btnAgregarEmp_Click(object sender, EventArgs e)
+        {
+            string mensaje;
+
+            // Llamar a ValidarCampos y verificar si la validación es exitosa
+            if (!ValidarCampos(out mensaje))
+            {
+                // Si la validación falla, mostrar el mensaje de error y salir del método
+                MessageBox.Show(mensaje);
+                return;
+            }
+
             try
             {
                 empleado.Nombre = txtNombre.Text;
@@ -136,18 +169,16 @@ namespace CapaVistas.Form_Menu
                 empleado.Id_Cargo = Convert.ToInt32(cmbCargo.SelectedValue);
                 empleado.AgregarEmpleado();
                 MessageBox.Show("Empleado agregado correctamente");
-                TraerTodos();
+                TraerTodos(dgvVerEmpAlta);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Ocurrió un error: {ex.Message}");
             }
         }
 
+
+
         #endregion
-
-
-
-
     }
 }
