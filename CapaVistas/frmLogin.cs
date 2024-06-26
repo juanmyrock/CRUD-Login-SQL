@@ -201,13 +201,13 @@ namespace CapaVistas
                 {
                     permisos += elemento + "\n";
                 }
-
                 MessageBox.Show($"¡Ingreso Exitoso!\n\n{cls_UserCache.ApellidoEmpleado} {cls_UserCache.NombreEmpleado}\n\nPERMISOS:\n{permisos}");
-
                 // Aca va el registro en la bitácora 
                 // clsBitacora Guardar = new clsBitacora("Ingreso al Sistema", "Ingreso Exitoso", "frmLoguin");
 
                 this.DialogResult = DialogResult.OK; // Cerrar el formulario de inicio de sesión
+
+                
             }
         }
     }

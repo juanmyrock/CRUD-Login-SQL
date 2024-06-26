@@ -10,7 +10,7 @@ namespace CapaVistas.Form_Menu
     {
 
         private cls_Usuarios usuario = new cls_Usuarios();
-        private int UserSeleccionadoId;
+        //private int UserSeleccionadoId;
 
 
         public frmUsuarios()
